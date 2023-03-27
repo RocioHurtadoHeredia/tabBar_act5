@@ -29,7 +29,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 4,
+      length: 6,
       child: Scaffold(
         appBar: AppBar(
           backgroundColor: const Color(0xff000000),
@@ -38,10 +38,12 @@ class _MyHomePageState extends State<MyHomePage> {
                 borderRadius: BorderRadius.circular(50), // Creates border
                 color: const Color(0xfff2b42d)),
             tabs: const [
+              Tab(icon: Icon(Icons.home)),
               Tab(icon: Icon(Icons.account_circle)),
-              Tab(icon: Icon(Icons.directions_transit)),
-              Tab(icon: Icon(Icons.directions_car)),
+              Tab(icon: Icon(Icons.flatware_rounded)),
               Tab(icon: Icon(Icons.favorite)),
+              Tab(icon: Icon(Icons.search)),
+              Tab(icon: Icon(Icons.settings)),
             ],
           ),
           title: const Text('Carls Jr'),
@@ -49,10 +51,12 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         body: const TabBarView(
           children: [
-            Icon(Icons.flight, size: 350),
-            Icon(Icons.directions_transit, size: 350),
-            Icon(Icons.directions_car, size: 350),
+            Icon(Icons.home, size: 350),
+            Icon(Icons.account_circle, size: 350),
+            Icon(Icons.flatware_rounded, size: 350),
             Icon(Icons.favorite, size: 350),
+            Icon(Icons.search, size: 350),
+            Icon(Icons.settings, size: 350),
           ],
         ),
       ),
